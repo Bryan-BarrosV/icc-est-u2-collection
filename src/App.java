@@ -1,9 +1,11 @@
 import java.time.Period;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import controllers.MaquinaController;
+import maps.Maps;
 import models.Maquina;
 import models.Node;
 import models.Person;
@@ -12,8 +14,9 @@ import structures.sets.Sets;
 public class App {
     public static void main(String[] args) throws Exception {
         Sets setsClase = new Sets();
-        Set<String> hashSet = setsClase.construirHashSet();
-        System.out.println(hashSet);
+        // Set<String> hashSet = setsClase.construirHashSet();
+        // System.out.println(hashSet);
+
         // System.out.println(hashSet.size());
         // System.out.println(hashSet.contains("A"));
         // System.out.println("A".hashCode());
@@ -32,20 +35,22 @@ public class App {
         // System.out.println(n2.hashCode());
         // System.out.println(n1.hashCode() == n2.hashCode());
 
-        Set<String> linkSet = setsClase.construirLinkedSet();
-        System.out.println(linkSet);
+        // Set<String> linkSet = setsClase.construirLinkedSet();
+        // System.out.println(linkSet);
 
-        Set<String> treeSet = setsClase.construirTreeSet();
-        System.out.println(treeSet);
+        // Set<String> treeSet = setsClase.construirTreeSet();
+        // System.out.println(treeSet);
 
-        Set<String> treeSetComparador = setsClase.construitTreSetConComparador();
-        System.out.println(treeSetComparador);
+        // Set<String> treeSetComparador = setsClase.construitTreSetConComparador();
+        // System.out.println(treeSetComparador);
 
 
-        Set<Person> treePersons = setsClase.personsTreeSet();
-        System.out.println(treePersons);
+        // Set<Person> treePersons = setsClase.personsTreeSet();
+        // System.out.println(treePersons);
+
         // System.out.println("Carlos".compareTo("Ana"));
-        runMaquina();
+        // runMaquina();
+        runMaps();
 
     }
     private static void runMaquina(){
@@ -57,6 +62,8 @@ public class App {
         }
         System.out.println(maquinasO.size());
     }
+
+    
     static List<Maquina> crearMaquinas() {
 
         List<Maquina> maquinas = Arrays.asList(
@@ -111,6 +118,27 @@ public class App {
                 new Maquina("Nodo6", "169.238.150.174", Arrays.asList(6, 14, 3)),
                 new Maquina("DB13", "71.248.50.86", Arrays.asList(17, 11, 12)));
         return maquinas;
+
+    }
+    
+    private static void runMaps(){
+        Maps maps = new Maps();
+        Map<String, Integer> hashMap = maps.construirHashMap();
+        System.err.println(hashMap);
+
+        Map<String, Integer> treeMap = maps.connstruirTreeMap();
+        System.out.println(treeMap);
+
+        Map<Person, Integer> treePersMap = maps.construirTreeM();
+        System.out.println(treePersMap);
+        maps.printFilter(treePersMap);
+
+        Map<Integer, Person> treeMapInvertido = maps.construirTreeMapPersonasInverso();
+        System.out.println(treeMapInvertido);
+        
+        Map<Integer, Person> personObj = maps.construirTreeMapPersonasObj();
+        System.out.println(personObj);
+
 
     }
 }
