@@ -2,64 +2,30 @@
 
 ## Autor
 - Nombre: Bryan Barros
-- Carrera/Curso: Estructura de Datos
+- Carrera/Curso: Computacion
 
 
-##  Práctica:  Práctica de Árboles – Implementación Integers -  [2026-01-13]
-
+##  Nombre de la práctica - Fecha
+- Práctica: PC: Maps Ejercicisios
+- Fecha: [2026-01-19]
 
 ## Descripción
-Implementamos el uso de Liked
-
-
+Descripción de que es lo que hizo o alcanzo desarrollar en la práctica.
 
 ## Evidencias
 ### Captura 1
-Inserta aquí la captura del código o de la ejecución.
-- Archivo: ![`assets/captura-1.png`](assets/Salida.png)
+Dada una secuencia de N enteros, determine cuántas veces aparece cada número.
+- Archivo: ![`assets/captura-1.png`](assets/Ejercicio1ContarD.png)
 
 ### Captura 2 
-Inserta aquí una segunda captura si aplica.
-- Archivo: ![`assets/captura-2.png`](assets/SizeO(1).png)
+Dada una secuencia de enteros, determine el primer número que no se repite, respetando el orden de aparición.
+- Archivo: ![`assets/captura-2.png`](assets/Ejercicio2.png)
 
----
-
-##  Implementación Genéricos uso de interfaces Comparable - [2026-01-13]
-
-## Descripción
-Se implementó un Árbol Binario de Búsqueda (BST) en Java usando genéricos y la interfaz Comparable.
-El árbol permite insertar, recorrer en inOrder y buscar elementos de forma eficiente.
-
-Se añadieron búsquedas específicas para objetos Person, como:
-
-búsqueda por edad
-
-búsqueda por nombre
-
-Estas búsquedas funcionan correctamente solo si el árbol está ordenado según ese criterio.
+### Captura 3
+Se recibe una lista de jugadores con su puntaje.
+Si un jugador aparece más de una vez, se conserva el mayor puntaje.
+Imprimir el ranking ordenado por puntaje descendente.
+- Archivo: ![`assets/captura-2.png`](assets/Ejercicio3.png)
 
 
 
-## Evidencias
-### Captura 1
-Código fuente
-- Archivo: ![alt text](assets/EvidenciaTree.png)
-
-### Captura 2 
-Salida por consola
-- Archivo: ![alt text](assets/ResultadoTr.png)
-
----
-##  Práctica de Graphs - [2026-01-08]
-
-## Descripción
-Este proyecto implementa un grafo genérico en Java utilizando las clases Node<T> y Graph<T>. Cada nodo almacena un valor genérico, permitiendo trabajar con distintos tipos de datos, mientras que el grafo gestiona las relaciones entre nodos mediante una lista de adyacencia. Esta estructura facilita la representación y manipulación de grafos de forma clara, flexible y reutilizable.
-
-## Evidencias
-### Captura 1
-Código fuente
-- Archivo: ![alt text](assets/Codigo3.png)
-
-### Captura 2 
-Salida por consola
-- Archivo: ![alt text](assets/ResultadoTr.png)

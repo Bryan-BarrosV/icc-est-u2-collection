@@ -111,7 +111,8 @@ public class Maps {
         list.add(new Person("Andres", 23, 129));
         list.add(new Person("Luis", 18, 124));
         //Ordenar por la edad y nombre y
-        //
+        //No permita duplicados por la cedula
+        //Map<Cedula, Persona>
         Map<Integer, Person> persons = new TreeMap<>();
         for (Person p : list) {
             persons.put(p.getCedula(), p);

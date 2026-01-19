@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 import controllers.MaquinaController;
+import maps.EjerciciosMapas;
 import maps.Maps;
 import models.Maquina;
 import models.Node;
@@ -44,16 +45,17 @@ public class App {
         // Set<String> treeSetComparador = setsClase.construitTreSetConComparador();
         // System.out.println(treeSetComparador);
 
-
         // Set<Person> treePersons = setsClase.personsTreeSet();
         // System.out.println(treePersons);
 
         // System.out.println("Carlos".compareTo("Ana"));
         // runMaquina();
-        runMaps();
+        // runMaps();
+        runEjercicios();
 
     }
-    private static void runMaquina(){
+
+    private static void runMaquina() {
         List<Maquina> maquinas = crearMaquinas();
         MaquinaController controller = new MaquinaController();
         Set<Maquina> maquinasO = controller.ordenarPorSubRed(maquinas);
@@ -63,7 +65,6 @@ public class App {
         System.out.println(maquinasO.size());
     }
 
-    
     static List<Maquina> crearMaquinas() {
 
         List<Maquina> maquinas = Arrays.asList(
@@ -120,8 +121,8 @@ public class App {
         return maquinas;
 
     }
-    
-    private static void runMaps(){
+
+    private static void runMaps() {
         Maps maps = new Maps();
         Map<String, Integer> hashMap = maps.construirHashMap();
         System.err.println(hashMap);
@@ -135,10 +136,46 @@ public class App {
 
         Map<Integer, Person> treeMapInvertido = maps.construirTreeMapPersonasInverso();
         System.out.println(treeMapInvertido);
-        
+
         Map<Integer, Person> personObj = maps.construirTreeMapPersonasObj();
         System.out.println(personObj);
 
+    }
+
+    private static void runEjercicios() {
+    EjerciciosMapas ejercicios = new EjerciciosMapas();
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+            11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+            21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+            11, 12, 13, 14, 15, 16, 17, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,18, 19, 20,
+            11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+
+        List<Integer> list1 = Arrays.asList(
+            4, 5, 1, 2, 5, 4, 3, 2, 1, 6,
+            7, 3, 8, 9, 6, 7, 10
+        );
+        List<String[]> entradas = List.of(
+            new String[]{"Ana", "80"},
+            new String[]{"Luis", "90"},
+            new String[]{"Carlos", "70"},
+            new String[]{"Ana", "85"},
+            new String[]{"Sofia", "95"},
+            new String[]{"Luis", "88"},
+            new String[]{"Pedro", "60"},
+            new String[]{"Maria", "75"}
+        );
+
+        System.out.println("Ejercicios Mapas");
+        System.out.println("----------------------------");
+        System.out.println("\nContar Duplicados ");
+        System.out.println(ejercicios.contarDuplicados(list));
+        System.out.println("-------------------------");
+        System.out.println("\nPrimero no repetido ");
+        System.out.println(ejercicios.noRepetido(list1));
+        System.out.println("------------------------");
+        System.out.println("\nRanking puntajes ");
+        ejercicios.RankingPuntajes(entradas);
 
     }
 }
