@@ -1,5 +1,6 @@
 import java.time.Period;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -143,39 +144,49 @@ public class App {
     }
 
     private static void runEjercicios() {
-    EjerciciosMapas ejercicios = new EjerciciosMapas();
+        EjerciciosMapas ejercicios = new EjerciciosMapas();
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-            11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-            21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
-            1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-            11, 12, 13, 14, 15, 16, 17, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,18, 19, 20,
-            11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+                11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+                21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                11, 12, 13, 14, 15, 16, 17, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 18, 19, 20,
+                11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
 
         List<Integer> list1 = Arrays.asList(
-            4, 5, 1, 2, 5, 4, 3, 2, 1, 6,
-            7, 3, 8, 9, 6, 7, 10
-        );
+                4, 5, 1, 2, 5, 4, 3, 2, 1, 6,
+                7, 3, 8, 9, 6, 7, 10);
         List<String[]> entradas = List.of(
-            new String[]{"Ana", "80"},
-            new String[]{"Luis", "90"},
-            new String[]{"Carlos", "70"},
-            new String[]{"Ana", "85"},
-            new String[]{"Sofia", "95"},
-            new String[]{"Luis", "88"},
-            new String[]{"Pedro", "60"},
-            new String[]{"Maria", "75"}
-        );
+                new String[] { "Ana", "80" },
+                new String[] { "Luis", "90" },
+                new String[] { "Carlos", "70" },
+                new String[] { "Ana", "85" },
+                new String[] { "Sofia", "95" },
+                new String[] { "Luis", "88" },
+                new String[] { "Pedro", "60" },
+                new String[] { "Maria", "75" });
+
+        Map<String, Integer> datos = new HashMap<>();
+        datos.put("Computacion-Ana", 85);
+        datos.put("Computacion-Luis", 92);
+        datos.put("Electronica-Carlos", 78);
+        datos.put("Electronica-Maria", 88);
+        datos.put("Computacion-Pedro", 90);
+        datos.put("Mecanica-Juan", 80);
+        datos.put("Mecanica-Sofia", 95);
 
         System.out.println("Ejercicios Mapas");
-        System.out.println("----------------------------");
+        System.out.println("--------------------------");
         System.out.println("\nContar Duplicados ");
         System.out.println(ejercicios.contarDuplicados(list));
-        System.out.println("-------------------------");
+        System.out.println("--------------------------");
         System.out.println("\nPrimero no repetido ");
         System.out.println(ejercicios.noRepetido(list1));
-        System.out.println("------------------------");
+        System.out.println("--------------------------");
         System.out.println("\nRanking puntajes ");
         ejercicios.RankingPuntajes(entradas);
+        System.out.println("--------------------------");
+        System.out.println("\nMaximo Por Carrera");
+        ejercicios.maximoPorCarrera(datos);
 
     }
 }

@@ -1,6 +1,5 @@
 package maps;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -44,4 +43,22 @@ public Integer noRepetido(List<Integer> lista){
             System.out.println(key + " -> " + puntajes.get(key));
         }
     }
+
+    public void maximoPorCarrera(Map<String, Integer> datos) {
+    Map<String, Integer> maxPorCarrera = new HashMap<>();
+
+    for (String key : datos.keySet()) {
+        String carrera = key.split("-")[0];
+        int nota = datos.get(key);
+        if (!maxPorCarrera.containsKey(carrera) 
+                || nota > maxPorCarrera.get(carrera)) {
+            maxPorCarrera.put(carrera, nota);
+        }
+    }
+
+    for (String carrera : maxPorCarrera.keySet()) {
+        System.out.println(carrera + " -> " + maxPorCarrera.get(carrera));
+    }
+}
+
 }

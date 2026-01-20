@@ -27,5 +27,10 @@ Si un jugador aparece más de una vez, se conserva el mayor puntaje.
 Imprimir el ranking ordenado por puntaje descendente.
 - Archivo: ![`assets/captura-2.png`](assets/Ejercicio3.png)
 
+### Captura 4
+Se ingresan estudiantes con su carrera y nota final.
+Mostrar la nota más alta por cada carrera.
+- Archivo: ![alt text](assets/Ejercicio4.png)
+
 
 
